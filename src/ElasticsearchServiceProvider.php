@@ -6,6 +6,7 @@ use Basemkhirat\Elasticsearch\Commands\ReindexCommand;
 use Elasticsearch\ClientBuilder as ElasticBuilder;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 use Laravel\Scout\EngineManager;
 use Basemkhirat\Elasticsearch\Commands\ListIndicesCommand;
 use Basemkhirat\Elasticsearch\Commands\CreateIndexCommand;
@@ -46,7 +47,7 @@ class ElasticsearchServiceProvider extends ServiceProvider
 
         // Auto configuration with lumen framework.
 
-        if (str_contains($this->app->version(), 'Lumen')) {
+        if (Str::contains($this->app->version(), 'Lumen')) {
             $this->app->configure("es");
         }
 
