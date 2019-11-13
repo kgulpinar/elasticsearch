@@ -2,6 +2,7 @@
 
 namespace Basemkhirat\Elasticsearch;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
@@ -346,7 +347,7 @@ class Model
     public function save()
     {
 
-        $fields = array_except($this->attributes, ["_index", "_type", "_id", "_score"]);
+        $fields = Arr::except($this->attributes, ["_index", "_type", "_id", "_score"]);
 
         if ($this->exists()) {
 
