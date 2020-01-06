@@ -110,11 +110,10 @@ class CreateIndexCommand extends Command
 
                     // Create mapping for type from config file
 
-                    $this->info("Creating mapping for type: {$type} in index: {$index}");
+                    $this->info("Creating mapping for index: {$index}");
 
                     $client->indices()->putMapping([
                         'index' => $index,
-                        'type' => $type,
                         'body' => $mapping
                     ]);
 

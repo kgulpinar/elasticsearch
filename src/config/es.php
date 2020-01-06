@@ -74,7 +74,7 @@ return [
             ],
 
             'mappings' => [
-                'posts' => [
+                '_doc' => [
                     "properties" => [
                         'title' => [
                             'type' => 'string'
@@ -82,9 +82,6 @@ return [
                     ]
                 ]
             ]
-
         ]
-
     ]
-
 ];
