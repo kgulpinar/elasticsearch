@@ -461,8 +461,8 @@ class Query
             $this->filter[] = ["range" => [$name => ["lte" => $value]]];
         }
 
-        if ($operator === "like") {
-            $this->must[] = ["match" => [$name => $value]];
+        if ($operator == "like") {
+            $this->must[] = ["wildcard" => [$name => $value]];
         }
 
         if ($operator === "exists") {
