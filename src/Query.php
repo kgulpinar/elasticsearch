@@ -462,7 +462,7 @@ class Query
         }
 
         if ($operator == "like") {
-            $this->must[] = ["match" => [$name => $value]];
+            $this->must[] = ["wildcard" => [$name => $value]];
         }
 
         if ($operator == "exists") {
