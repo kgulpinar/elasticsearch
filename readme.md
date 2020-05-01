@@ -66,7 +66,7 @@ $ php artisan vendor:publish --provider="Basemkhirat\Elasticsearch\Elasticsearch
 
 ##### 1) Install package using composer.
 ```bash
-$ composer require basemkhirat/elasticsearch
+$ composer require richdynamix/elasticsearch
 ```
 
 ##### 2) Add package service provider in `bootstrap/app.php`.
