@@ -64,6 +64,9 @@ class Connection
 
         $clientBuilder->setHosts($config["servers"]);
 
+        if(isset($config["SSLVerification"]))
+            $clientBuilder->setSSLVerification($config["SSLVerification"]);
+        
         $query = new Query($clientBuilder->build());
 
         if (array_key_exists("index", $config) and $config["index"] != "") {
@@ -103,6 +106,9 @@ class Connection
 
             $clientBuilder->setHosts($config["servers"]);
 
+            if(isset($config["SSLVerification"]))
+            $clientBuilder->setSSLVerification($config["SSLVerification"]);
+            
             if (!empty($config['handler'])) {
                 $clientBuilder->setHandler($config['handler']);
             }
